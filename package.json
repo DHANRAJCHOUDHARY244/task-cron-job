@@ -1,0 +1,35 @@
+{
+  "name": "task_jobs",
+  "version": "1.0.0",
+  "description": "Task job using Redis, Node.js, node-cron, and fs for logging",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "nodemon server.js",
+    "start-cluster": "pm2 start server.js -i 2 --name task-cluster --watch",
+    "logs": "pm2 logs",
+    "list": "pm2 list",
+    "stop-all": "pm2 stop all",
+    "delete-all": "pm2 delete all",
+    "monitor": "pm2 monit"
+  },
+  "keywords": [
+    "Redis",
+    "NodeJs",
+    "Express",
+    "TaskSchedular"
+  ],
+  "author": "Dhanraj Choudhary",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "node-cron": "^3.0.3",
+    "pm2": "^5.4.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
