@@ -1,5 +1,5 @@
 const cron = require('node-cron');
-const { processQueue, cleanUpOldTasks } = require('../service/redis/query.service');
+const { processQueue} = require('../service/redis/query.service');
 
 // Schedule cron job to run every second
 cron.schedule('* * * * * *', async () => {
