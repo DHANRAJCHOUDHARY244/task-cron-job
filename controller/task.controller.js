@@ -1,7 +1,3 @@
-const { addToQueue, getQueueLength } = require('../service/redis/query.service');
-const fs = require('fs');
-const path = require('path');
-const { promisify } = require('util');
 const { ReS, ReE, logTaskAction } = require('../service/util.service');
 const {  successCode, serverErrorCode } = require('../config/constant');
 
